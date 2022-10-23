@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from './router/Index'
 import { MessageBox, Message, Button } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './css/reset.css'
@@ -21,5 +21,8 @@ Vue.use(Button)
 Vue.directive('debounce', debounce)
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  beforeCreate () {
+    Vue.prototype.$bus = this
+  }
 }).$mount('#app')

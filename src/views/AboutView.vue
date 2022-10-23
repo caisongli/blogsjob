@@ -1,11 +1,3 @@
-<!-- <template>
-  <div class="zzsc">
-    <canvas id="canvas" width="920" height="400"></canvas>
-  </div>
-</template>
-<script defer src="../utils/canvas.js"> -->
-
-<!-- </script> -->
 <template>
   <div class="zzsc">
     <canvas id="canvas" width="920" height="400"></canvas>

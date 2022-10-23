@@ -33,6 +33,11 @@ const routes = [
             name: 'icon',
             component: () => import('../views/basic/basic-icon.vue')
           },
+          {
+            path: 'todo-list',
+            name: 'todolist',
+            component: () => import('../views/todolist/index-page.vue')
+          },
 
         ]
       },

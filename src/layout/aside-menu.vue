@@ -14,6 +14,7 @@
         <el-menu-item index="/basic">查询列表</el-menu-item>
         <el-menu-item index="/basic-layout">Layout布局</el-menu-item>
         <el-menu-item index="/basic-icon">icon图标</el-menu-item>
+        <el-menu-item index="/todo-list">todo-list</el-menu-item>
         <!-- <el-menu-item-group>
                     <span slot="title">组件基本用法发</span>
                     <el-menu-item index="/basic">查询列表</el-menu-item>

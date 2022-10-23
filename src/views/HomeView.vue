@@ -8,6 +8,9 @@
     <DataList></DataList>
     <hr>
     <el-button @click="fn($event)" v-debounce:2000>dd</el-button>
+    <el-button @click="alertBox()" disabled>按钮</el-button>
+    <p>{{'dd' | lcs }}</p>
+    <p>{{ Date.now() | formatDate(1) }}</p>
   </div>
 </template>
 
