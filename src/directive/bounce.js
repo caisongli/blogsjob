@@ -1,7 +1,5 @@
 export const debounce = {
   inserted (el, binding) {
-    console.log(el);
-    console.log(binding);
     let delay = binding.arg
     let timer
     el.addEventListener('click', function (e) {
@@ -10,7 +8,6 @@ export const debounce = {
       timer = setTimeout(() => {
         el.classList.toggle('is-disabled')
         console.log(e.target);
-        console.log(1111);
       }, +delay)
     })
 

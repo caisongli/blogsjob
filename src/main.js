@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router/Index'
+import router from './router'
 import { MessageBox, Message, Button } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './css/reset.css'
