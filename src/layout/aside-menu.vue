@@ -22,7 +22,7 @@
                     <el-menu-item index="/basic-icon">icon图标</el-menu-item>
                 </el-menu-item-group> -->
       </el-submenu>
-      <el-menu-item index="/about" @click.native="reload">
+      <el-menu-item index="/about">
         <i class="el-icon-menu"></i>
         <span slot="title">时间页</span>
       </el-menu-item>
@@ -69,11 +69,15 @@
 </style>
   
 <script>
+// import { myCanvas } from '@/utils/canvas.js'
 export default {
   data () {
     return {
       isCollapse: false
     };
+  },
+  mounted(){
+   //
   },
   methods: {
     handleOpen (key, keyPath) {
@@ -82,10 +86,6 @@ export default {
     handleClose (key, keyPath) {
       console.log(key, keyPath);
     },
-    reload () {
-      // this.$router.go(0)
-      // location.reload()
-    }
   }
 }
 </script>

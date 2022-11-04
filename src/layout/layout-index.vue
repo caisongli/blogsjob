@@ -1,9 +1,11 @@
 <template>
     <el-container direction="vertical" style="height:100vh;">
         <el-header>
-            <el-link ref="link" :underline="false" icon="el-icon-s-home" style="fontSize:20px" href='https://www.lcsblogs.com'>主页</el-link>
+            <el-link ref="link" :underline="false" icon="el-icon-s-home" style="fontSize:20px"
+                href='https://www.lcsblogs.com'>主页</el-link>
             <span style="fontSize:20px;fontWeight:900;">我的小后台</span>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：{{ data }}
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：{{ data }} -->
+            <canvas id="canva"></canvas>
         </el-header>
         <el-container style="height:100vh;overflow:hidden;">
             <el-aside width="auto">
@@ -19,6 +21,7 @@
 <script>
 import AsideMenu from './aside-menu.vue';
 import { formatDate } from '../hooks/formatDate'
+import { myCanvas } from '@/utils/canvas.js'
 export default {
     components: { AsideMenu },
     data() {
@@ -43,6 +46,10 @@ export default {
         this.timer = setInterval(() => {
             _this.data = formatDate()
         }, 1000)
+        this.$nextTick(() => {
+            this.fns(300, 80,"canva",1.5)
+        })
+
     },
     destroyed() {
         clearInterval(this.timer)
@@ -51,7 +58,8 @@ export default {
     },
     methods: {
         // 
-    }
+    },
+    mixins: [myCanvas]
 }
 </script>
 
@@ -64,6 +72,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    > canvas{
+        margin-left: 100px;
+    }
 }
 
 .el-aside {

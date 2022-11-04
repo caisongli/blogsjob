@@ -1,30 +1,27 @@
 <template>
   <div class="zzsc">
-    <canvas id="canvas" width="920" height="400"></canvas>
+    <canvas id="canvas"></canvas>
   </div>
 </template>
 
 <script>
-import canvas from '../utils/canvas.js'
+import { myCanvas } from '@/utils/canvas.js'
 export default {
-  inject: ['reload'], // 引入方法
-  mounted () {
-    // this.$router.go(0)
-    // this.fnc()
-    // this.$nextTick(() => {
-    this.fnc()
-    // })
+  mounted() {
+    this.$nextTick(() => {
+      this.fns(920,400)
+    })
   },
   methods: {
-    fnc () {
-      canvas
+    //
+  },
+  data() {
+    return {
+      istrue: false,
     }
   },
-  data () {
-    return {
-      istrue: false
-    }
-  }
+  mixins: [myCanvas]
+
 }
 </script>
 
